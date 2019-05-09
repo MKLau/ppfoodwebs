@@ -1,0 +1,10 @@
+,ant,sed,prey,hab,sar,met,wye,fle,respiration
+ant,0,0,theta_A * Volume,0,0,0,0,0,0
+sed,0,0,0,0,0,0,0,0,0
+prey,0,s * D * (D / (D + hab + sar  + met + wye)),0,u_P * (u_B * D + B) * hab * (hab / (D + hab + sar  + met + wye)),u_P * (u_B * D + B) * sar * (sar / (D + hab + sar  + met + wye)),u_P * (u_B * D + B) * met * (met / (D + hab + sar  + met + wye)),u_P * (u_B * D + B) * wye * (wye / (D + hab + sar  + met + wye)),0,r_B * B
+hab,0,0,m_P * hab,0,0,0,u_M * hab* wye * (wye/ ( wye + fle)),u_M * hab * fle * (fle / (wye + fle)),r_P * hab
+sar,0,0,0,0,0,0,0,0,r_M *  sar
+met,0,0,m_P * met ,u_P * met * hab * (hab / (hab + sar + wye)),u_P * met * sar * (sar / (hab + sar + wye)),0,u_P * met * wye * (wye / (hab + sar + wye)),0,r_M  * met
+wye,0,0,0,0,0,0,0,u_M * wye * fle,r_M * wye
+fle,0,0,m_P * fle,0,0,0,0,u_M * fle * fle,r_M * fle
+respiration,0,0,0,0,0,0,0,0,0

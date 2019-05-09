@@ -1,2 +1,40 @@
-# ppfoodwebs
-Empirical pitcher plant inquiline food web models.
+# ppfoodwebs: Empirical pitcher plant inquiline food web models.
+
+## Summary
+
+* Models of are naturally occurring ecosystems with co-evoled
+  organisms and well defined boundaries are difficult to quantify.
+* The inquiline communities of the purple pitcher plant (*Sarracenia
+  purpurea*) provide a food web whose size permits replicated
+  sampling of this "microecosystem". 
+* This project synthesizes work on the structure and dynamics of the
+  pitcher plant microecosystem [@Mouquet, @Ellison, @Gotelli, @Baker,
+  @Lau] to generate empirical models based on sampling of food web
+  organism abundances in the field.
+
+## Microecosystem Models
+
+Details about the pitcher plant microecosystem see [@Baker, @Baiser,
+@Lau].
+* For background on the system see [@Ellison].
+* Sampling methods of the inquline abundances are detailed in
+  [@Gotelli]. 
+
+## Loading Models in R
+
+To load the pitcher plant inquiline food web models, just run:
+
+```
+source("load_ppnets.R")
+```
+
+
+
+
+## Software Dependencies
+
+* R Packages: *Rgraphviz*, *Hmisc*, *enaR*, *ggplot2*, *igraph*,
+  *intergraph*, *reshape*, *statnet*, *sna*.
+* Package statnet.common requires update R version
+
+
