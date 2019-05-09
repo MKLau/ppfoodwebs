@@ -14,8 +14,7 @@ sapply(packs[-1], function(x, y)
     y = installed.packages()[, 1])
 sapply(packs, require, character.only = TRUE)
 
-source('src/helpers.R')
-
+source('helpers.R')
 
 ## 1999 dataset is HF193-01
 ## hf193-01-hm99-rs.csv
@@ -39,32 +38,11 @@ rawdata <- droplevels(rawdata)
 ## 1. Detritus and water volume are known
 ## 2. Bacteria are unknown and combined into deteritus
 ## 3. Several additional fly and one mite species have been introduced
-mod.par <- na.omit(read.csv("data/mouquet_model_2008.csv"))
-mod <- na.omit(read.csv("data/pp_C_flow.csv")[, -1])
+mod.par <- na.omit(read.csv("../data/mouquet_model_2008.csv"))
+mod <- na.omit(read.csv("../data/pp_C_flow.csv")[, -1])
 mod <- as.matrix(mod)
 colnames(mod)[colnames(mod) == "prey"] <- "det"
 rownames(mod) <- colnames(mod)
-
-### output tables to manuscript 
-mp.xtab <- mod.par 
-mp.xtab <- xtable::xtable(mp.xtab, 
-                          caption =
-                              "Parameter values used in the food web models.", 
-                          label = "tab:par")
-print(mp.xtab, type="latex", 
-      file = "docs/manuscript/tablepar.tex", 
-      rownames = TRUE) 
-cm.xtab <- mod 
-cm.xtab <- data.frame(gsub(" ", "", cm.xtab)) 
-cm.xtab <- xtable::xtable(cm.xtab, 
-                          caption =
-                              "Formulae used to calculate the values for the flows used in the food web carbon models.", 
-                          label = "tab:par") 
-print(cm.xtab, 
-      type="latex", 
-      file = "docs/manuscript/tablecmodel.tex", 
-      rownames = TRUE, 
-      scalebox = 0.35)
 
 ## split into a list of observations by individual pitchers in time
 data.split <- split(rawdata, (apply(rawdata[, 1:5] , 1, paste, collapse="_")))
