@@ -38,6 +38,7 @@ rawdata <- droplevels(rawdata)
 ## 1. Detritus and water volume are known
 ## 2. Bacteria are unknown and combined into deteritus
 ## 3. Several additional fly and one mite species have been introduced
+## All flows are units of mg C
 mod.par <- na.omit(read.csv("../data/mouquet_model_2008.csv"))
 mod <- na.omit(read.csv("../data/pp_C_flow.csv")[, -1])
 mod <- as.matrix(mod)

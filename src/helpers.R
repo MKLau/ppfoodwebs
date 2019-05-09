@@ -116,15 +116,15 @@ mkFoodWeb <- function(x = "variable value matrix",
     }
     ## create objects for the variables
     for (i in 1:nrow(x)){
-        assign(as.character(x[i,"variable"]), 
-               as.numeric(as.character(x[i,"value"])))
+        assign(as.character(x[i, "variable"]), 
+               as.numeric(as.character(x[i, "value"])))
     }
     ## convert ml to L 
     if (Volume.ml){Volume <- Volume / 1000} 
     ## Build the flow matrix based on the model and observed values
     for (i in 1:nrow(mod)){
         for (j in 1:ncol(mod)){
-            flow[i,j] <- eval(parse(text = as.character(mod[i,j])))
+            flow[i,j] <- eval(parse(text = as.character(mod[i, j])))
         }
     }
     if (zero.na){flow[is.na(flow)] <- 0}

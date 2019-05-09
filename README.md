@@ -9,8 +9,9 @@
   sampling of this "microecosystem". 
 * This project synthesizes work on the structure and dynamics of the
   pitcher plant microecosystem [@Mouquet, @Ellison, @Gotelli, @Baker,
-  @Lau] to generate empirical models based on sampling of food web
-  organism abundances in the field.
+  @Lau] to generate over 3000 empirical models based on sampling of
+  food web organism abundances in the field over the course of several
+  field seasons.
 
 ## Microecosystem Models
 
@@ -42,3 +43,4 @@ This will run the model calculations and produce two objects:
 * Package statnet.common requires update R version
 
 # References
+
