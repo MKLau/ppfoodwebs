@@ -1,4 +1,4 @@
-# Construct a supraadjacency matrix from a list
+### Construct a supraadjacency matrix from a list
 
 ### Populate the Mouquet nitrogen and carbon models
 ### using biomass from the observed pitcher plants

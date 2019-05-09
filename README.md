@@ -22,13 +22,17 @@ Details about the pitcher plant microecosystem see [@Baker, @Baiser,
 
 ## Loading Models in R
 
-To load the pitcher plant inquiline food web models, just run:
+To load the pitcher plant inquiline food web models, just run the
+following from the `src` directory:
 
-```
+```{r eval = FALSE}
 source("load_ppnets.R")
 ```
 
+This will run the model calculations and produce two objects: 
 
+* *pp.nets*: a list of flow matrices (carbon).
+* *pp.info*: sampling details for each model.
 
 
 ## Software Dependencies
@@ -37,4 +41,4 @@ source("load_ppnets.R")
   *intergraph*, *reshape*, *statnet*, *sna*.
 * Package statnet.common requires update R version
 
-
+# References
