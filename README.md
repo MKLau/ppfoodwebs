@@ -28,7 +28,7 @@ following from the `src` directory:
 
 This will run the model calculations and produce two objects:
 
--   *pp.nets*: a list of flow matrices (carbon).
+-   *pp.nets*: a list of flow matrices (currently carbon only).
 -   *pp.info*: sampling details for each model.
 
 Software Dependencies

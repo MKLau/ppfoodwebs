@@ -7,7 +7,7 @@
 
 ### Data from the Harvard Forest Data Archive hf193
 
-packs <- c("igraph", "sna", "xtable")
+packs <- c("igraph", "sna")
 sapply(packs[-1], function(x, y) 
     if (!(x %in% y)){install.packages(x, 
          repos = 'http://cran.us.r-project.org')}, 
@@ -63,8 +63,7 @@ obs <- apply(info[, c('site', 'date', 'trt', 'plant', 'leaf')], 1, paste, collap
 ### that there is 100% survival and/or 100% replacement
 out <- interp.obs(data.split.2, obs)
 
-### Still needs to make output to match data.split.2
-### Re-order by variables? Hopefully, this isn't an issue.
+### Re-order by variables
 out <- do.call(rbind, out)
 out <- split(out, apply(out[, 1:5], 1, paste, collapse="_"))
 
